@@ -1,0 +1,14 @@
+ Il volume nell'unit… C non ha etichetta.
+ Numero di serie del volume: F6D6-3E9C
+
+ Directory di C:\Users\Gullima\Desktop\proj
+
+02/03/2018  13:28    <DIR>          .
+02/03/2018  13:28    <DIR>          ..
+01/03/2018  17:14                 0 index.html
+02/03/2018  13:28                 0 pippo.txt
+01/03/2018  16:51                43 prova.bat
+01/03/2018  17:20               506 prova.txt
+01/03/2018  17:14                 0 readme.txt
+               5 File            549 byte
+               2 Directory  418.472.595.456 byte disponibili
