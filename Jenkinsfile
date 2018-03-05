@@ -2,9 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+		stage('Checkout') {
             steps {
-                echo 'Building..'
+                checkout scm
+            }
+        }
+        stage('AutoDeploy') {
+            steps {
+                bat 'dir'
+				bat 'cd C:\Users\Gullima\Desktop\proj'
+				bat 'prova1.bat'
             }
         }
         stage('Test') {
