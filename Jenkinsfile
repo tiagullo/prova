@@ -15,7 +15,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                bat 'cd C:\\Users\\Gullima\\Desktop'
+				echo 'ciao ciao' 
+				echo 'compilazione fatta' 
             }
         }
         stage('Deploy') {
