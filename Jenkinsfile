@@ -9,7 +9,7 @@ pipeline {
         }
         stage('AutoDeploy') {
             steps {
-				cd C:\\Users\\Gullima\\Desktop\\proj
+				bat 'cd C:\\Users\\Gullima\\Desktop\\proj'
 				prova1.bat
             }
         }
