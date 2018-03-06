@@ -1,12 +1,5 @@
 pipeline {
-    agent {
-        docker { image 'node:latest' }
-    }
-    stages {
-        stage('Test') {
-            steps {
-                bat 'node --version'
-            }
-        }
+	docker.image('maven:3.3.3-jdk-8').inside {
+        bat 'node --version'
     }
 }
