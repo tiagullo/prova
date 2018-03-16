@@ -1,20 +1,21 @@
-node {
-  for (int i=0; i< 2; ++i) {  
-    stage "Stage #"+i
-    print 'Hello, world $i!'
-  }
+pipeline {
+    agent any
 
-  stage "Stage Parallel"
-  def branches = [:]
-  for (int i = 0; i < numHelloMessages.toInteger(); i++) {
-    branches["split${i}"] = {
-      stage "Stage parallel- #"+i
-      node('remote') {
-       echo  'Starting sleep'
-       sleep 10
-       echo  'Finished sleep'
-      }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
-  }
-  parallel branches
 }
