@@ -1,11 +1,10 @@
-node {
-    stage('Build') {
-        echo 'Building....'
+docker.image('ruby:2.3.1').inside {
+
+    stage("Install Bundler") {
+      sh "gem install bundler --no-rdoc --no-ri"
     }
-    stage('Test') {
-        echo 'Building....'
-    }
-    stage('Deploy') {
-        echo 'Deploying....'
+
+    stage("Use Bundler to install dependencies") {
+      sh "bundle install"
     }
 }
