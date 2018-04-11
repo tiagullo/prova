@@ -1,0 +1,12 @@
+wordpress:
+  container_name: my-wordpress-app
+  image: wordpress
+  ports:
+    - "180:80"
+  links:
+    - "mysql:mysql"
+mysql:
+  container_name: my-wordpress-database
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: "password"
