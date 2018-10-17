@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-asda
-=======
-asdasdasdasd
->>>>>>> master
+
